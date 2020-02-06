@@ -44,6 +44,6 @@ class App < Sinatra::Base
     else
       "This is not a valid operation: #{@operation}"
     end
-    @return_num.
+    @return_num.to_s
   end
 end
