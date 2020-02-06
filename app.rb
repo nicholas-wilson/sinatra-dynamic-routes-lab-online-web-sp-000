@@ -31,6 +31,7 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     @operation = params[:operation]
+    @return_num = ""
     case @operation
     when 'add'
       @return_num = params[:number1].to_i + params[:number2].to_i
@@ -43,5 +44,6 @@ class App < Sinatra::Base
     else
       "This is not a valid operation: #{@operation}"
     end
+    @return_num.
   end
 end
