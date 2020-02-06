@@ -42,7 +42,7 @@ class App < Sinatra::Base
     when 'multiply'
       @return_num = params[:number1].to_i * params[:number2].to_i
     else
-      "This is not a valid operation: #{@operation}"
+      @return_num = "This is not a valid operation: #{@operation}"
     end
     @return_num.to_s
   end
